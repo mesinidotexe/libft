@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmesini- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 18:28:46 by vmesini-          #+#    #+#             */
-/*   Updated: 2025/10/21 18:28:49 by vmesini-         ###   ########.fr       */
+/*   Created: 2025/10/21 20:21:27 by vmesini-          #+#    #+#             */
+/*   Updated: 2025/10/21 20:21:33 by vmesini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*u_dest;
-	unsigned char	*u_src;
+	size_t		i;
 
-	u_dest = (unsigned char *)dest;
-	u_src = (unsigned char *)src;
 	i = 0;
-	while (u_src[i] != '\0' && (i < n))
+	while (i < n)
 	{
-		u_dest[i] = u_src[i];
+		((unsigned char *)s)[i] = c;
 		i++;
 	}
-	return (dest);
+	return (s);
 }
+
+/* int main(void)
+{
+    char buffer[20] = "Hello, world!";
+
+    printf("Antes do ft_memset: %s\n", buffer);
+
+    // Substitui os 5 primeiros bytes por 'x'
+    ft_memset(buffer, '-', 5);
+
+    printf("Depois do ft_memset: %s\n", buffer);
+
+    return 0;
+} */
