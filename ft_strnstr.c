@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                          :+:      :+:    :+:*/
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmesini- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -34,11 +34,3 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 	}
 	return (big);
 }
-
-/* int	main(void)
-{
-	char	c1[] = "this is being searched\n";
-	char	c2[] = " searched";
-	printf("looking for: %s", ft_strnstr(c1, c2, 3));
-	return (0);
-} */
