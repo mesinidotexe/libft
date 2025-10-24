@@ -32,8 +32,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(vetor, nmemb * size);
 	return (vetor);
 }
-
-int main()
+/* int main()
 {
 	char *palavra = NULL;
 	palavra = ft_calloc(1000000, 1);
@@ -44,4 +43,4 @@ int main()
 	free (palavra);
 	printf ("%p", palavra);
 	return 0;
-}
+} */
