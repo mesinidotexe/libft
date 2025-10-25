@@ -31,7 +31,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return (sub);
 }
 
-int main(void)
+/*int main(void)
 {
     char str[] = "Olá, mundo!";
     char *sub;
@@ -51,4 +51,4 @@ int main(void)
     free(sub);
 
     return (0);
-}
+}*/
