@@ -51,7 +51,7 @@
 
 
 
-char *ft_strtrim(char const *s1, char const *set)
+/* char *ft_strtrim(char const *s1, char const *set)
 {
     char *temp;
     char *trimmed;
@@ -59,8 +59,8 @@ char *ft_strtrim(char const *s1, char const *set)
     int i;
     int lenset;
 
-    lens = ft_strlen(s1);
-    lenset = ft_strlen(set);
+    lens = ft_strlen(s1) - 1;
+    lenset = ft_strlen(set) - 1;
 
     // se nao tiver set, return o cast da s1
     if (set[0] == '\0')
@@ -70,7 +70,8 @@ char *ft_strtrim(char const *s1, char const *set)
 
     // alocando memoria
     temp = malloc(sizeof(char) * ft_strlen(s1));
-    if (!temp)
+    trimmed = malloc(sizeof(char) * ft_strlen(s1));
+    if (!temp && !trimmed)
     {
         return (NULL);
     }
@@ -87,7 +88,7 @@ char *ft_strtrim(char const *s1, char const *set)
         lens--;
     }
     lens = 0;
-
+    i = 0;
     // limpando o comeco da string
     while (temp[lens])
     {
@@ -102,13 +103,57 @@ char *ft_strtrim(char const *s1, char const *set)
     trimmed[i] = '\0';
     return (trimmed);
 }
+ */
+
+char	*ft_strchr(const char *s, int c)
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = (char *)s;
+	while (str[i] != c && s[i])
+		i++;
+	if (str[i] == '\0')
+		return (NULL);
+	return (&str[i]);
+}
+
+
+char *ft_strtrim(char const *s1, char const *set)
+{
+    char *trimmed;
+    int start;
+    int end;
+    int i;
+
+    i = 0;
+    start = 0;
+    end = ft_strlen(s1) - 1;
+    while (s1[start] && ft_strchr(set, s1[start]))
+        start++;
+    while (end >= 0 && ft_strchr(set, s1[end]))
+        end--;
+    trimmed = malloc(sizeof(char) * end);
+    if (!trimmed)
+        return (NULL);
+    while (start <= end)
+    {
+        trimmed[i++] = s1[start++];
+    }
+    trimmed[i] = '\0';
+    return (trimmed);
+}
+
 
 
 
  int	main(void)
 {
-	const char *str1 = "like lalalalala eu ee like ";
-	const char *str2 = "like ";
-	printf("%s \n", ft_strtrim(str1, str2));
-	return (0);
+	const char *str1 = "abcabcabcabcab a cabcabcabcabc";
+	const char *str2 = "abc";
+    char *trimmed = ft_strtrim(str1, str2);
+	printf("%s \n", trimmed);
+	free (trimmed);
+    return (0);
 }
