@@ -49,6 +49,8 @@ static char	*ft_write_words(const char *s, char c)
 	char	*arr;
 
 	arr = ft_calloc(sizeof(char), (ft_str_char_len(s, c) + 1));
+	if (!arr)
+		return (NULL);
 	i = 0;
 	while (s[i] != c)
 	{
@@ -65,6 +67,8 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 
 	array = ft_calloc(sizeof(char *), ft_count_word(s, c) + 1);
+	if (!array)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (i < ft_count_word(s, c))
