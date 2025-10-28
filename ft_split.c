@@ -79,8 +79,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array);
 }
-
-int	main(void)
+/* int	main(void)
 {
 	char	*string;
 	char	**arrays;
@@ -96,4 +95,4 @@ int	main(void)
 	}
 	printf("%s\n", arrays[i]);
 	return (0);
-}
+} */
