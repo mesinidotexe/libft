@@ -49,5 +49,7 @@ char	*ft_itoa(int n);
 int		ft_isalnum(int c);
 int		ft_toupper(int c);
 int		ft_toupper(int c);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 
 #endif
