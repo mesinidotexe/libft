@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmesini- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:09:55 by vmesini-          #+#    #+#             */
-/*   Updated: 2025/10/29 19:09:56 by vmesini-         ###   ########.fr       */
+/*   Created: 2025/10/29 21:27:18 by vmesini-          #+#    #+#             */
+/*   Updated: 2025/10/29 21:27:20 by vmesini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	int	i;
 
-	if (!s || !f)
-		return ;
-	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
+	s[i] = '\0';
+	write(fd, '\n', 1);
 }
-
-/* void	ft_weird(unsigned int i, char *c)
-{
-	(void) i;
-	if (*c >= 65 && *c <= 90)
-		*c = *c + 32;
-}
-int main()
-{
-	char s[] = "LALAlalaLALAlala";
-	ft_striteri(s, ft_weird);
-	printf("%s", s);
-	return (0);
-} */

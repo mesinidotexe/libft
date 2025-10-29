@@ -1,40 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmesini- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 19:09:55 by vmesini-          #+#    #+#             */
-/*   Updated: 2025/10/29 19:09:56 by vmesini-         ###   ########.fr       */
+/*   Created: 2025/10/29 21:31:02 by vmesini-          #+#    #+#             */
+/*   Updated: 2025/10/29 21:31:04 by vmesini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+static void	ft_putchar(char c, int fd)
 {
-	unsigned int	i;
+	write(fd, &c, 1);
+}
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i])
+static void	ft_putnbr(int nb, int fd)
+{
+	if (nb == -2147483648)
 	{
-		f(i, &s[i]);
-		i++;
+		write(1, "-2147483648", 11);
+		return ;
 	}
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = (nb * -1);
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10, fd);
+	}
+	ft_putchar((nb % 10) + '0', fd);
 }
 
-/* void	ft_weird(unsigned int i, char *c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	(void) i;
-	if (*c >= 65 && *c <= 90)
-		*c = *c + 32;
+	ft_putnbr(n, fd);
 }
-int main()
+
+/* int main()
 {
-	char s[] = "LALAlalaLALAlala";
-	ft_striteri(s, ft_weird);
-	printf("%s", s);
+	int test;
+
+	test = 0;
+	ft_putnbr_fd(test, 1);
 	return (0);
 } */
