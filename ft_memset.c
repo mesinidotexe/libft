@@ -28,13 +28,8 @@ void	*ft_memset(void *s, int c, size_t n)
 /* int main(void)
 {
     char buffer[20] = "Hello, world!";
-
-    printf("Antes do ft_memset: %s\n", buffer);
-
-    // Substitui os 5 primeiros bytes por 'x'
+    printf("Antes: %s\n", buffer);
     ft_memset(buffer, '-', 5);
-
-    printf("Depois do ft_memset: %s\n", buffer);
-
+    printf("Depois: %s\n", buffer);
     return 0;
 } */

@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	*vetor;
+	void	*vetor;
 
 	if (nmemb == 0 || size == 0)
 	{

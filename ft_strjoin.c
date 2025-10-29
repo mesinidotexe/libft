@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	newstr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s1) + 1));
+	newstr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!newstr)
 		return (NULL);
 	while (s1[i] != 0)
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
-	newstr[i + 1] = '\0';
+	newstr[i] = '\0';
 	return (newstr);
 }
 

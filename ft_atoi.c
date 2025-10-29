@@ -19,9 +19,9 @@ int	ft_atoi(const char *str)
 
 	nbr = 0;
 	neg = 0;
-	if (str = "-2147483648")
+	if (str == "-2147483648")
 		return (-2147483648);
-	if (str = "2147483647")
+	if (str == "2147483647")
 		return (2147483647);
 	while (*str < '0' || *str > '9')
 	{

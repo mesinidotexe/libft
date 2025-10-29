@@ -20,13 +20,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	destination = (unsigned char *)dest;
 	source = (unsigned char *)src;
-	if (destination > source)
+	if (destination < source)
 		ft_memcpy(dest, src, n);
 	else
 	{
-		while (i < n)
+		while (n > 0)
 		{
-			destination[n] = source[n];
+			destination[n - 1] = source[n - 1];
 			n--;
 		}
 	}
