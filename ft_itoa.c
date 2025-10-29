@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static char *ft_check_max_min(int n)
+static char	*ft_check_max_min(int n)
 {
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
@@ -20,25 +20,25 @@ static char *ft_check_max_min(int n)
 	return (NULL);
 }
 
-static int ft_check_digits(int n)
+static int	ft_check_digits(int n)
 {
-	int digits;
+	int	digits;
 
 	digits = 1;
-    if (n < 0)
-        n = -n;
-    while (n >= 10)
-    {
-        n = n / 10;
-        digits++;
-    }
-    return (digits);
+	if (n < 0)
+		n = -n;
+	while (n >= 10)
+	{
+		n = n / 10;
+		digits++;
+	}
+	return (digits);
 }
 
-static char *ft_write_number(int digits, int n, int neg, char *str)
+static char	*ft_write_number(int digits, int n, int neg, char *str)
 {
 	str[digits + neg] = '\0';
-    if (n == 0)
+	if (n == 0)
 		str[digits - 1] = '0';
 	while (n > 0)
 	{
@@ -51,12 +51,12 @@ static char *ft_write_number(int digits, int n, int neg, char *str)
 	return (str);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int digits;
-	int neg;
-	
+	char	*str;
+	int		digits;
+	int		neg;
+
 	neg = 0;
 	if (n == -2147483648 || n == 2147483647)
 		return (str = ft_check_max_min(n));
@@ -68,8 +68,8 @@ char *ft_itoa(int n)
 	}
 	str = malloc(sizeof(char) * (digits + neg + 1));
 	if (!str)
-    	return (NULL);
-	str = ft_write_number(digits, n , neg, str);
+		return (NULL);
+	str = ft_write_number(digits, n, neg, str);
 	return (str);
 }
 
@@ -82,5 +82,5 @@ char *ft_itoa(int n)
 	char *str = ft_itoa(2147483647);
 	printf("%s", str);
 	free (str);
-	return 0;
+	return (0);
 }*/

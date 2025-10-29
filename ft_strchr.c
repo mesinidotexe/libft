@@ -23,7 +23,6 @@ char	*ft_strchr(const char *s, int c)
 	if (str[i] == c)
 		return (&str[i]);
 	return (NULL);
-	
 }
 
 /* int main()

@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 
@@ -35,5 +35,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	char *str1 = "HelLo World";
 	char *str2 = "Hello world";
 	printf ("The ascii difference is %d", ft_memcmp(str1, str2, 4));
-	return 0;
+	return (0);
 } */
