@@ -10,30 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <libbsd.h>
 
 char	*ft_strnstr(char *big, char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	temp;
 
 	i = 0;
 	if (little[i] == '\0')
 		return (&big[i]);
-	while (big[i])
+	while ((big[i]) && (i < len))
 	{
 		j = 0;
-		temp = i;
-		while ((little[j] == big[i]) && (j < len))
-		{
-			i++;
+		while ((big[i + j] == little[j]) && (j + i < len))
 			j++;
-		}
-		if ((little[j] == big[i]) && (j <= len))
-		{
-			return (&big[temp]);
-		}
+		if (little[j] == '\0')
+			return (&big[i]);
 		i++;
 	}
 	return (NULL);
@@ -48,12 +40,8 @@ int	main(void)
 	result = ft_strnstr(big, little, 6);
 
 	if (result)
-	{
-		// result[2] = 0;
 		printf("Encontrado: %s\n", result);
-	}
 	else
-		printf("Não encontrado!\n");
-
+		printf("nao ta aqui\n");
 	return (0);
 }
