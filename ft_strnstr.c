@@ -31,7 +31,7 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 	return (NULL);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char big[] = "Eu estou procurando uma palavra!";
 	char little[] = "estou blabla";
@@ -44,4 +44,4 @@ int	main(void)
 	else
 		printf("nao ta aqui\n");
 	return (0);
-}
+}*/
