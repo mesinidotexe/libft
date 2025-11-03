@@ -19,6 +19,8 @@ int	ft_atoi(const char *str)
 
 	nbr = 0;
 	neg = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
 	if (str == "-2147483648")
 		return (-2147483648);
 	if (str == "2147483647")
