@@ -9,7 +9,6 @@
 /*   Updated: 2025/11/04 20:55:10 by vmesini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -28,3 +27,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		ultimo->next = new;
 	}
 }
+

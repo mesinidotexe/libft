@@ -9,7 +9,6 @@
 /*   Updated: 2025/11/04 20:55:24 by vmesini-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)

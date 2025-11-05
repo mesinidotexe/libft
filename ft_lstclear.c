@@ -33,12 +33,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free(current);
 	}
 }
-/* void	del(void *content)
+/*void	del(void *content)
 {
 	free(content);
-} */
+}*/
 
-/* int	main(void)
+/*int	main(void)
 {
 	t_list	*head;
 	int		*num;
@@ -58,4 +58,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	ft_lstclear(&head->next, &del);
 	printf("|||||%d|||||\n", *(int *)head->content);
 	return (0);
-} */
+}*/
