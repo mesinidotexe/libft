@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	str = (char *)s;
 	if (c == '\0')
-		return (&s[ft_strlen(s)]);
+		return ((char *)&s[ft_strlen(s)]);
 	i = ft_strlen(str);
 	while ((str[i] != c) && (i != 0))
 		i--;
@@ -31,7 +31,6 @@ char	*ft_strrchr(const char *s, int c)
 /* int	main(void)
 {
 	const char *str1 = "abcdeflghijklmnopqrstuvwxy";
-	char *str2;
-	printf("%s \n", ft_strrchr(str1, 'l'));
+	printf("%s \n", ft_strrchr(str1, '\0'));
 	return (0);
 } */

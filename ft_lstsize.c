@@ -19,10 +19,25 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	counter = 0;
-	while (lst->next != NULL)
+	while (lst)
 	{
 		counter++;
 		lst = lst->next;
 	}
 	return (counter);
 }
+
+/* int main()
+{
+    t_list *head;
+
+    head = ft_lstnew((int *)10);
+    head->next = ft_lstnew((int *)20);
+    head->next->next = ft_lstnew((int *)30);
+    head->next->next->next = ft_lstnew((int *)40);
+    printf("%d\n", ft_lstsize(head));
+
+	printf ("%d", *(int *)&head->content);
+
+    return 0;
+} */

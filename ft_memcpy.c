@@ -28,3 +28,13 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/* int main()
+{
+	int a = 10;
+	int b = 20;
+	
+	int *ptr_a = &a;
+	int *ptr_b = &b;
+	printf ("%d", *(int *)ft_memcpy(ptr_a, ptr_b, 2));
+	return 0;
+} */

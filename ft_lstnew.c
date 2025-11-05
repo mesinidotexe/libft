@@ -23,3 +23,12 @@ t_list	*ft_lstnew(void *content)
 	nextnode->next = NULL;
 	return (nextnode);
 }
+
+/* int main()
+{
+    t_list *head;
+    int test = 36;
+    head = ft_lstnew(&test);
+    printf ("%d", *(int *)head->content);
+    return 0;
+} */
