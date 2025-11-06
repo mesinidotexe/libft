@@ -39,4 +39,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	printf("%d", ft_strncmp(test1, test11, 3));
 	return 0;
 }*/
-

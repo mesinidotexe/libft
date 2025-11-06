@@ -28,4 +28,3 @@ size_t	ft_strlen(const char *s)
 	printf("%d", ft_strlen(test));
 	return 0;
 }*/
-

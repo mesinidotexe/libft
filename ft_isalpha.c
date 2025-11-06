@@ -32,4 +32,3 @@ int	ft_isalpha(int c)
 	printf("%d\n", ft_isalpha(test5));
 	return 0;
 }*/
-
