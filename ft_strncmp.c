@@ -27,3 +27,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (s1[i] - s2[i]);
 }
+/*int main()
+{
+	char *test1 = "ABC";
+	char *test11 = "ABC";
+	char *test2 = "ABB";
+	char *test3 = "ACC";
+	printf("%d", ft_strncmp(test1, test2, 3));
+	printf("%d", ft_strncmp(test2, test3, 3));
+	printf("%d", ft_strncmp(test3, test1, 3));
+	printf("%d", ft_strncmp(test1, test11, 3));
+	return 0;
+}*/
+

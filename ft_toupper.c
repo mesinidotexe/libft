@@ -18,3 +18,11 @@ int	ft_toupper(int c)
 		c = c + 32;
 	return (c);
 }
+/*int main()
+{
+	char test1 = "a";
+	char test2 = "/";
+	printf("%d", ft_toupper(test1));
+	printf("%d", ft_toupper(test2));
+	return 0;
+}*/

@@ -18,3 +18,17 @@ int	ft_isascii(int c)
 		return (0);
 	return (1);
 }
+/*int main()
+{
+	int test1 = 500;
+	int test2 = 5;
+	char test3 = 'K';
+	char test4 = 't';
+	char test5 = '5';
+	printf("%d\n", ft_isascii(test1));
+	printf("%d\n", ft_isascii(test2));
+	printf("%d\n", ft_isascii(test3));
+	printf("%d\n", ft_isascii(test4));
+	printf("%d\n", ft_isascii(test5));
+	return 0;
+}*/

@@ -20,3 +20,17 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
+/*int main()
+{
+	int test1 = 500;
+	int test2 = 5;
+	char test3 = 'K';
+	char test4 = 't';
+	char test5 = '5';
+	printf("%d\n", ft_isdigit(test1));
+	printf("%d\n", ft_isdigit(test2));
+	printf("%d\n", ft_isdigit(test3));
+	printf("%d\n", ft_isdigit(test4));
+	printf("%d\n", ft_isdigit(test5));
+	return 0;
+}*/

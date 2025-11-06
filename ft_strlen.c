@@ -21,3 +21,11 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
+/*int main(int argc, char const *argv[])
+{
+	char *test = "ajshndfuisdnfludsnflusn";
+	printf("%d", ft_strlen(test));
+	return 0;
+}*/
+

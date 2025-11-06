@@ -21,3 +21,18 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	int test1 = 500;
+	int test2 = 5;
+	char test3 = 'K';
+	char test4 = 't';
+	char test5 = '5';
+	printf("%d\n", ft_isalnum(test1));
+	printf("%d\n", ft_isalnum(test2));
+	printf("%d\n", ft_isalnum(test3));
+	printf("%d\n", ft_isalnum(test4));
+	printf("%d\n", ft_isalnum(test5));
+	return 0;
+}*/

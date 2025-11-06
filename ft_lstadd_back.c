@@ -27,4 +27,16 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		ultimo->next = new;
 	}
 }
-
+/*int main()
+{
+    t_list *head;
+    t_list *new;
+    
+    int head_value = 50;
+    head = ft_lstnew(&head_value);
+    int new_value = 36;
+    new = ft_lstnew(&new_value);
+    ft_lstadd_back(&head, new);
+    printf("%d", *(int *)head->content);
+    return 0;
+}*/
