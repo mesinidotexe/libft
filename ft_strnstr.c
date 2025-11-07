@@ -29,7 +29,7 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 		{
 			j++;
 			if (little[j] == '\0')
-			return (&big[i]);
+				return (&big[i]);
 		}
 		i++;
 	}
@@ -43,5 +43,5 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 
  	char *i2 = ft_strnstr(s1, s1, max);
 	printf ("%s", i2);
-	return (0);
+	return (0);I
 } */
