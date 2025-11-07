@@ -14,9 +14,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
-	int	newline;
 
-	newline = 10;
 	if (!s)
 		return ;
 	i = 0;
@@ -25,6 +23,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	s[i] = '\0';
-	write(fd, &newline, 1);
+	write(fd, "\n", 1);
 }

@@ -29,6 +29,7 @@ SRCS = ft_isalpha.c\
 	ft_itoa.c\
 	ft_putchar_fd.c\
 	ft_putendl_fd.c\
+	ft_putstr_fd.c\
 	ft_putnbr_fd.c\
 	ft_split.c\
 	ft_strjoin.c\
@@ -46,7 +47,7 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-%.o: %.c
+%.o: %.cc
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

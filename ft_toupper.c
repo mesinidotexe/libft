@@ -14,15 +14,15 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 65 && c <= 90)
-		c = c + 32;
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
 	return (c);
 }
-/*int main()
+/* int main()
 {
-	char test1 = "a";
-	char test2 = "/";
+	char test1 = 'a';
+	char test2 = '/';
 	printf("%d", ft_toupper(test1));
 	printf("%d", ft_toupper(test2));
 	return 0;
-}*/
+} */

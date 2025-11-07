@@ -11,20 +11,6 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	int		i;
-	char	*str;
-
-	i = 0;
-	str = (char *)s;
-	while (str[i] != c && s[i])
-		i++;
-	if (str[i] == '\0')
-		return (NULL);
-	return (&str[i]);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;

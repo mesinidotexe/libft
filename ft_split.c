@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array);
 }
-/* int	main(void)
+/*int	main(void)
 {
 	char	*string;
 	char	**arrays;
