@@ -10,38 +10,38 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strnstr(char *big, char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	size_t	strsize;
 
 	i = 0;
-	if (little[i] == '\0')
+	strsize = ft_strlen(little);
+	if (strsize == 0)
 		return (&big[i]);
-	while ((big[i]) && (i < len))
+	while ((i < len) && (big[i]))
 	{
 		j = 0;
-		while ((big[i + j] == little[j]) && (j + i < len))
+		while ((j + i < len) && (big[i + j] == little[j]))
+		{
 			j++;
-		if (little[j] == '\0')
+			if (little[j] == '\0')
 			return (&big[i]);
+		}
 		i++;
 	}
 	return (NULL);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
-	char big[] = "Eu estou procurando uma palavra!";
-	char little[] = "estou blabla";
-	char *result;
+	char *s1 = "AAAAAAAAAAAAA";
+ 	size_t max = strlen(s1);
 
-	result = ft_strnstr(big, little, 6);
-
-	if (result)
-		printf("Encontrado: %s\n", result);
-	else
-		printf("nao ta aqui\n");
+ 	char *i2 = ft_strnstr(s1, s1, max);
+	printf ("%s", i2);
 	return (0);
-}*/
+} */

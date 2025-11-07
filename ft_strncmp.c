@@ -14,10 +14,10 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	unsigned char *string1;
-	unsigned char *string2;
-	
+	size_t			i;
+	unsigned char	*string1;
+	unsigned char	*string2;
+
 	string1 = (unsigned char *)s1;
 	string2 = (unsigned char *)s2;
 	i = 0;
@@ -30,7 +30,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	if (string1[i] != string2[i])
-			return (string1[i - 1] - string2[i - 1 ]);
+		return (string1[i - 1] - string2[i - 1]);
 	return (string1[i] - string2[i]);
 }
 /*int main()
@@ -43,5 +43,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	printf("%d", ft_strncmp(test2, test3, 3));
 	printf("%d", ft_strncmp(test3, test1, 3));
 	printf("%d", ft_strncmp(test1, test11, 3));
-	return 0;
+	return (0);
 }*/

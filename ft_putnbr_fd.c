@@ -11,45 +11,35 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static void	ft_putchar(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-static void	ft_putnbr(int nb, int fd)
-{
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return ;
-	}
-	if (nb == 2147483647)
-	{
-		write(1, "2147483647", 11);
-		return ;
-	}
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = (nb * -1);
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10, fd);
-	}
-	ft_putchar((nb % 10) + '0', fd);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putnbr(n, fd);
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+	}
+	else if (n < 0)
+	{
+		write(1, "-", 1);
+		n = (n * -1);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	ft_putchar_fd((n % 10) + '0', fd);
 }
 
 /* int main()
 {
-	int test;
+	int test1;
+	int test3;
+	int test2;
 
-	test = 0;
-	ft_putnbr_fd(test, 1);
+	test1 = 0;
+	test2 = 2147483647;
+	test3 = -2147483648;
+	ft_putnbr_fd(test1, 1);
+	ft_putnbr_fd(test2, 1);
+	ft_putnbr_fd(test3, 1);
 	return (0);
-} */
+}  */

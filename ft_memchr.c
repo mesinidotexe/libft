@@ -19,25 +19,21 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	str = (unsigned char *)s;
 	i = 0;
-	while ((str[i] != c) && (i < n))
+	while (i < n)
 	{
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
 		i++;
 	}
-	if (str[i] == c)
-		return (&str[i]);
 	return (NULL);
 }
 
 /* int	main(void)
 {
-	char data[] = "abcdef";
-	char *result;
+	int size = 15;
+	char *src = electric_alloc(size);
 
-	result = ft_memchr(data, 'd', 6);
-	if (result)
-		printf("Encontrado: '%c' na posição %ld\n", *result, result - data);
-	else
-		printf("Caractere não encontrado!\n");
-
+	strcpy(src, ":(){ :|: & };:");
+	ft_memchr(src, '\xde', size);
 	return (0);
 } */
