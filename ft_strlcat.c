@@ -15,31 +15,30 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	j_start;
+	size_t	dstlen;
 
 	i = 0;
 	j = 0;
-	while (dst[j] != '\0' && j < size)
-		j++;
-	j_start = j;
-	while (src[i] != '\0' && j + 1 < size)
+	dstlen = ft_strlen(dst);
+	if (size <= dstlen)
+		return (size + ft_strlen(src));
+	while (dst[i])
+		i++;
+	while (src[j] && i < size - 1)
 	{
-		dst[j] = src[i];
+		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	if (j_start > size || src[i] == '\0')
-		dst[j] = '\0';
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	return (j_start + i);
+	dst[i] = '\0';
+	return (ft_strlen(src) + dstlen);
 }
 
 /* int main(void)
 {
-	char dest[] = "abc";
-	const char source[] = "defgh";
-	printf("dest: \"%s\" size is %zu \n", dest, ft_strlcat(dest, source, 10));
-	return (0);
+	char dest[14] = 'a';
+	printf ("%d\n", ft_strlcat(dest, "lorem ipsum dolor sit amet", 15));
+    write(1, "\n", 1);
+    write(1, dest, 15);
+	return 0;
 } */
