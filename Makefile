@@ -1,9 +1,5 @@
 NAME = libft.a
 
-CC = cc
-
-CFLAGS = -Wall -Werror -Wextra -Iincludes
-
 SRCS = ft_isalpha.c\
 	ft_isdigit.c\
 	ft_isalnum.c\
@@ -40,18 +36,37 @@ SRCS = ft_isalpha.c\
 	ft_substr.c
 
 
+BONUS_SRCS = ft_lstnew.c\
+	ft_lstadd_front.c\
+	ft_lstadd_back.c\
+	ft_lstsize.c\
+	ft_lstlast.c\
+	ft_lstdelone.c\
+	ft_lstclear.c\
+	ft_lstiter.c\
+	ft_lstmap.c
+
 OBJ = $(SRCS:.c=.o)
+
+BONUS_OBJ = $(BONUS_SRCS:.c=.o)
+
+CC = cc
+
+CFLAGS = -Wall -Werror -Wextra -Iincludes
 
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
