@@ -16,13 +16,14 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
-		write(1, "-", 1);
-		n = (n * -1);
+		write(fd, "-", 1);
+		n = -n;
 	}
-	else if (n >= 10)
+	if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 	}
@@ -38,8 +39,14 @@ void	ft_putnbr_fd(int n, int fd)
 	test1 = 0;
 	test2 = 2147483647;
 	test3 = -2147483648;
+	// ft_putnbr_fd(-987441, 2);
+	// printf("\n");
+	ft_putnbr_fd(-7639, 1);
+	printf("\n");
 	ft_putnbr_fd(test1, 1);
+	printf("\n");
 	ft_putnbr_fd(test2, 1);
+	printf("\n");
 	ft_putnbr_fd(test3, 1);
 	return (0);
 }  */
