@@ -1,5 +1,7 @@
 NAME = libft.a
 
+TMP = .time_temp
+
 SRCS = ft_isalpha.c\
 	ft_isdigit.c\
 	ft_isalnum.c\
@@ -59,8 +61,11 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(BONUS_OBJ)
+bonus: $(TMP)
+
+$(TMP): $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+	touch $(TMP)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
