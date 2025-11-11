@@ -5,6 +5,7 @@
 *.o
 a.out
 a.exe
+.time_temp
 
 # Arquivos temporários do editor
 *~
