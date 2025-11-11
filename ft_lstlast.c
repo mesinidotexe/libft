@@ -23,7 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-/*int main()
+/*iint man()
 {
 	t_list *head = ft_lstnew((void *)10);
 	t_list *second = ft_lstnew((void *)20);

@@ -28,11 +28,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		if (!current)
 			free(current);
 	}
-	if (current)
-	{
-		del(current->content);
-		free(current);
-	}
 	*lst = NULL;
 }
 /*void	del(void *content)
