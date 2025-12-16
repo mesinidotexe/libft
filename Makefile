@@ -35,7 +35,18 @@ SRCS = ft_isalpha.c\
 	ft_strmapi.c\
 	ft_strtrim.c\
 	ft_strdup.c\
-	ft_substr.c
+	ft_substr.c\
+	ft_disp_char.c\
+	ft_disp_int.c\
+	ft_disp_pointer.c\
+	ft_disp_string.c\
+	ft_disp_unsigned.c\
+	ft_disp_x.c\
+	ft_disp_xx.c\
+	ft_printf.c\
+	ft_putchar.c\
+	ft_putnbr.c\
+	ft_putstr.c
 
 
 BONUS_SRCS = ft_lstnew.c\

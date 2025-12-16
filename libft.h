@@ -12,6 +12,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -78,5 +79,18 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+
+// printf
+int					ft_disp_char(int c);
+int					ft_putstr(char *s);
+int					ft_putnbr(int n);
+int					ft_putchar(char c);
+int					ft_printf(const char *s, ...);
+int					ft_disp_xx(unsigned long nbr);
+int					ft_disp_x(unsigned long nbr);
+int					ft_disp_unsigned(unsigned int n);
+int					ft_disp_string(char *string);
+int					ft_disp_pointer(void *ptr);
+int					ft_disp_int(int nbr);
 
 #endif
