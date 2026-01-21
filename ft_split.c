@@ -60,17 +60,6 @@ static char	*ft_write_words(const char *s, char c)
 	return (arr);
 }
 
-void free_array(char **array)
-{
-	int i = 0;
-	while (array[i])
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	int		i;
